@@ -1,0 +1,19 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "16"
+    modules = [ 'javafx.controls', 'javafx.fxml'  ]
+}
+
+application {
+    mainClass = 'sample.Main'
+    applicationDefaultJvmArgs = ['--module-path', '../lib', '--add-modules', 'javafx.controls,javafx.fxml']
+}
+mainClassName = 'sample.Main'
